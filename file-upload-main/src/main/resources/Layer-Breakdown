@@ -1,0 +1,32 @@
+The three-layer pattern is a software design pattern
+commonly used to split the application functionality into
+three distinct layers. Each layer is responsible for handling
+specific tasks and communicating with other layers to deliver
+the required functionality.
+
+The first layer is the Controller/Resource Layer, also known as
+the Web Layer. This is the layer responsible for controlling
+all web communication with the application. It sets up the
+endpoints for the application and handles any logic related
+to the web communication, such as handling HTTP requests and
+responses.
+
+The second layer is the Service Layer. This layer is responsible
+for handling all business logic within the application. It
+performs tasks such as applying logic to received or requested
+data, and generating data for the application's models. The
+service layer is designed to handle all of the complex
+processing tasks that are required to deliver the required
+functionality. It communicates with the Repository Layer to
+retrieve and store data in the database.
+
+The third layer is the Repository Layer. This layer is
+responsible for communicating with the database. It prepares
+the application's models for injection into the database and
+applies any generated or altered attributes to the models.
+Once the models are ready, the Repository Layer completes a
+transaction with the database using SQL. This layer ensures
+that the data required by the application is properly managed
+and secured.
+
+Controller -> Service -> Service Implementation -> DAO -> DAO Implementation -> Mapper
